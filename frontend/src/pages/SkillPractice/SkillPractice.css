@@ -1,0 +1,353 @@
+:root {
+  /* Primary Colors */
+  --primary-900: #1e40af;
+  --primary-800: #1e4ed8;
+  --primary-700: #2563eb;
+  --primary-600: #3b82f6;
+  --primary-500: #60a5fa;
+  --primary-400: #93c5fd;
+  --primary-300: #bfdbfe;
+  --primary-200: #dbeafe;
+  --primary-100: #eff6ff;
+
+  /* Neutral Colors */
+  --neutral-900: #0f172a;
+  --neutral-800: #1e293b;
+  --neutral-700: #334155;
+  --neutral-600: #475569;
+  --neutral-500: #64748b;
+  --neutral-400: #94a3b8;
+  --neutral-300: #cbd5e1;
+  --neutral-200: #e2e8f0;
+  --neutral-100: #f1f5f9;
+  --neutral-50: #f8fafc;
+
+  /* Accent Colors */
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-yellow: #f59e0b;
+  --accent-purple: #8b5cf6;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  --gradient-dark: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
+  --gradient-light: linear-gradient(135deg, var(--neutral-50), var(--primary-100));
+
+  /* Layout */
+  --card-border-radius: 16px;
+  --element-border-radius: 12px;
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.16);
+  --shadow-primary: 0 8px 24px rgba(37, 99, 235, 0.15);
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+}
+
+.skill-practice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--neutral-800);
+  background: var(--gradient-light);
+  min-height: 100vh;
+}
+
+.skill-practice-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--neutral-800);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--neutral-50);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* right align */
+  gap: 10px;            /* space between button and card */
+}
+
+/* Makes the integrity card float to the right without disturbing layout */
+.integrity-under-button .antiCheatBar {
+  width: 410px;        /* adjust as you like */
+  margin: 0;           /* remove default margins */
+  position: fixed;     /* fixed floating position */
+  right: 2rem;         /* align with the right side */
+  top: 120px;          /* position below the header */
+  z-index: 1000;       /* ensure it floats above other content */
+  box-shadow: var(--shadow-md); /* add shadow for better visibility */
+}
+
+.back-to-dashboard-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--element-border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.back-to-dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.practice-setup {
+  background: var(--neutral-50);
+  border-radius: var(--card-border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.setup-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--neutral-800);
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--element-border-radius);
+  font-size: 1rem;
+  background-color: white;
+  transition: var(--transition-normal);
+  color: var(--neutral-800);
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.primary-button {
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--element-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.primary-button:disabled {
+  background-color: var(--neutral-400);
+  cursor: not-allowed;
+}
+
+.problem-section {
+  background: var(--neutral-50);
+  border-radius: var(--card-border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.problem-header h2 {
+  margin: 0;
+  color: var(--neutral-800);
+  font-size: 1.5rem;
+}
+
+.problem-navigation {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--element-border-radius);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  font-weight: 500;
+}
+
+.nav-button:hover:not(:disabled) {
+  background: var(--primary-50);
+  border-color: var(--primary-300);
+  color: var(--primary-700);
+}
+
+.nav-button:disabled {
+  background-color: var(--neutral-100);
+  color: var(--neutral-400);
+  cursor: not-allowed;
+  border-color: var(--neutral-200);
+}
+
+.problem-content h3 {
+  color: var(--neutral-800);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.problem-description {
+  margin-bottom: 1.5rem;
+}
+
+.problem-examples {
+  margin-top: 1.5rem;
+}
+
+.example {
+  background-color: var(--neutral-50);
+  padding: 1rem;
+  border-radius: var(--element-border-radius);
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-500);
+}
+
+.solution-section {
+  margin-top: 2rem;
+}
+
+.solution-section h3 {
+  color: var(--neutral-800);
+  margin-bottom: 1rem;
+}
+
+.solution-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--element-border-radius);
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 200px;
+  transition: var(--transition-normal);
+  color: var(--neutral-800);
+}
+
+.solution-input:focus {
+  outline: none;
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.evaluate-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--element-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.evaluate-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.evaluate-button:disabled {
+  background-color: var(--neutral-400);
+  cursor: not-allowed;
+}
+
+.evaluation-result {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: var(--element-border-radius);
+  border-left: 4px solid;
+  box-shadow: var(--shadow-sm);
+}
+
+.evaluation-result.success {
+  background-color: var(--neutral-50);
+  border-left-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.evaluation-result.failure {
+  background-color: var(--neutral-50);
+  border-left-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.result-details {
+  margin-top: 0.5rem;
+}
+
+.result-details p {
+  margin: 0.5rem 0;
+}
+
+.no-skill-message {
+  text-align: center;
+  padding: 2rem;
+  color: var(--neutral-500);
+  font-style: italic;
+}

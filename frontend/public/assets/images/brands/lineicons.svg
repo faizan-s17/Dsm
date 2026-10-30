@@ -1,0 +1,22 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  
+  <!-- Left Icon (Machine Learning-inspired Symbol) -->
+  <circle cx="50" cy="50" r="25" fill="#4CAF50" />
+  <line x1="50" y1="25" x2="50" y2="75" stroke="#F3F4F6" stroke-width="2" />
+  <line x1="25" y1="50" x2="75" y2="50" stroke="#F3F4F6" stroke-width="2" />
+  <circle cx="50" cy="50" r="3" fill="#F3F4F6" />
+
+  <!-- Project Name Text -->
+  <text x="110" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1F2937" dominant-baseline="middle" text-anchor="start">
+    Machine Learning
+  </text>
+
+  <!-- Defining Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E5E7EB" />
+      <stop offset="100%" stop-color="#F9FAFB" />
+    </linearGradient>
+  </defs>
+</svg>

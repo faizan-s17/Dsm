@@ -1,0 +1,96 @@
+/* Testimonials Section Styling */
+#testimonials {
+    padding: 60px 20px;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc); /* Vibrant gradient */
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 12px; /* Smooth edges */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    color: #fff; /* White text for contrast */
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff; /* Bright white for heading */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Adds subtle depth */
+    animation: fadeInText 1s ease; /* Smooth fade-in animation */
+}
+
+#testimonials p {
+    font-size: 1.3rem;
+    color: #f1f1f1; /* Softer white for readability */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 15px auto;
+    font-style: italic; /* Adds a quote-like feel */
+    opacity: 0.9;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#testimonials p:last-child {
+    font-weight: bold;
+    color: #ffd700; /* Golden yellow for emphasis */
+    margin-top: 25px;
+    font-style: normal; /* Different style for emphasis */
+}
+
+/* Card Styling for Individual Testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent white for contrast */
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Elevated card shadow */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Customer Name */
+.testimonial-name {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2575fc; /* Primary blue for names */
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #333; /* Neutral color for testimonial text */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #testimonials h2 {
+        font-size: 2rem;
+    }
+
+    #testimonials p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+}

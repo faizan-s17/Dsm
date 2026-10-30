@@ -1,0 +1,12 @@
+.verify-page{display:flex;justify-content:center;padding:32px}
+.verify-card{max-width:900px;width:100%;background:#fff;border-radius:8px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
+.verify-card h2{margin:0 0 12px}
+.verified-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.badge-block{display:flex;align-items:center}
+.badge-icon{font-size:28px;margin-right:10px}
+.badge-name{font-weight:600}
+.score-block{text-align:right}
+.top-skills ul,.skill-snapshot ul{list-style:none;padding:0;margin:0}
+.top-skills li{padding:6px 0;border-bottom:1px solid #f1f1f1}
+.timeline-graph{margin-top:16px}
+.verify-loading,.verify-error{text-align:center;padding:40px}

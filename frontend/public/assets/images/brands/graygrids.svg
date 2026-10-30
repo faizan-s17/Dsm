@@ -1,0 +1,25 @@
+<svg width="300" height="100" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Left Icon (MongoDB-like Symbol) -->
+  <g transform="translate(50, 50) scale(0.5)">
+    <path d="M0,0 C0,20 20,30 40,20 C60,10 80,-10 70,-20 C60,-30 40,-20 40,-10 C40,0 0,0 0,0 Z" fill="url(#iconGradient)" />
+  </g>
+
+  <!-- Project Name Text -->
+  <text x="110" y="55" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1F2937" dominant-baseline="middle" text-anchor="start">
+    MongoDB
+  </text>
+
+
+  <!-- Defining Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0F4F8" />
+      <stop offset="100%" stop-color="#E5E7EB" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4DB33D" />
+      <stop offset="100%" stop-color="#387D26" />
+    </linearGradient>
+  </defs>
+</svg>

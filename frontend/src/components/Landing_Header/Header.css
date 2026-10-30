@@ -1,0 +1,150 @@
+/* General Header Styling */
+header {
+  background: linear-gradient(90deg, #1a1c20, #23272a); /* Subtle gradient for depth */
+  padding: 15px 50px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow for prominence */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(26, 28, 32, 0.95); /* Subtle transparency on scroll */
+  backdrop-filter: blur(8px);
+  padding: 10px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 2rem; /* Slightly larger for emphasis */
+  font-weight: 700;
+  color: #ffc107; /* Gold for visibility */
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  color: #40cf8e; /* Vibrant green on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Navigation Styling */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 35px; /* Wider spacing for a cleaner look */
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(90deg, #ffc107, #40cf8e); /* Gradient highlight */
+  color: #1a1c20;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Glow effect */
+}
+
+/* Underline Animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; /* Slightly thicker underline */
+  bottom: 0;
+  left: 50%;
+  background: #ffc107;
+  transition: all 0.4s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Active Link Styling */
+.nav-links .active {
+  color: #ffc107;
+  font-weight: 600;
+  background: rgba(255, 193, 7, 0.2); /* Subtle background for active link */
+  padding: 10px 20px; /* More padding for emphasis */
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #23272a;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #fff;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffc107;
+  color: #1a1c20;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,285 @@
+/* Modern Color Scheme & Variables */
+:root {
+  /* Primary Colors */
+  --primary-900: #1e40af;
+  --primary-800: #1e4ed8;
+  --primary-700: #2563eb;
+  --primary-600: #3b82f6;
+  --primary-500: #60a5fa;
+  --primary-400: #93c5fd;
+  --primary-300: #bfdbfe;
+  --primary-200: #dbeafe;
+  --primary-100: #eff6ff;
+
+  /* Neutral Colors */
+  --neutral-900: #0f172a;
+  --neutral-800: #1e293b;
+  --neutral-700: #334155;
+  --neutral-600: #475569;
+  --neutral-500: #64748b;
+  --neutral-400: #94a3b8;
+  --neutral-300: #cbd5e1;
+  --neutral-200: #e2e8f0;
+  --neutral-100: #f1f5f9;
+  --neutral-50: #f8fafc;
+
+  /* Accent Colors */
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --accent-yellow: #f59e0b;
+  --accent-purple: #8b5cf6;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  --gradient-dark: linear-gradient(135deg, var(--neutral-800), var(--neutral-900));
+  --gradient-light: linear-gradient(135deg, var(--neutral-50), var(--primary-100));
+
+  /* Layout */
+  --card-border-radius: 16px;
+  --element-border-radius: 12px;
+
+  /* Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.16);
+  --shadow-primary: 0 8px 24px rgba(37, 99, 235, 0.15);
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+}
+
+/* General Styling */
+.company-auth-body {
+  background: var(--gradient-light);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.company-auth-form {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem;
+  max-height: 85vh;
+  overflow-y: auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: all var(--transition-normal);
+}
+
+.company-auth-form:hover {
+  transform: scale(1.02);
+}
+
+.company-auth-tab-group {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.company-auth-tab {
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.company-auth-tab.active {
+  border-bottom: 4px solid var(--primary-600);
+  color: var(--primary-600);
+}
+
+.company-auth-tab:hover {
+  color: var(--primary-700);
+}
+
+.company-auth-tab-content {
+  padding: 10px;
+}
+
+.company-auth-field-wrap {
+  margin-bottom: 8px;
+}
+
+.company-auth-field-wrap label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--neutral-800);
+}
+
+.company-auth-field-wrap input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--element-border-radius);
+  font-size: 0.875rem;
+  transition: all var(--transition-normal);
+  background-color: var(--neutral-50);
+  color: var(--neutral-800);
+}
+
+.company-auth-field-wrap input:focus {
+  border-color: var(--primary-600);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.company-auth-button {
+  width: 100%;
+  padding: 0.875rem;
+  border: none;
+  border-radius: var(--element-border-radius);
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-auth-button:hover {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.company-auth-button.primary {
+  background: var(--gradient-primary);
+}
+.go-back{
+  background: linear-gradient(to right, #abacae, #ffffff);
+  width: 100%;
+}
+.or-divider {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--neutral-300);
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+.error-message {
+  color: var(--accent-red);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.company-auth-forgot-password {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.company-auth-forgot-password a {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+  transition: color var(--transition-normal);
+}
+
+.company-auth-forgot-password a:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+
+/* OTP Verification */
+.company-auth-otp-verification {
+  text-align: center;
+}
+
+.company-auth-otp-verification h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--neutral-800);
+}
+
+.company-auth-otp-verification input {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--element-border-radius);
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  background-color: var(--neutral-50);
+  color: var(--neutral-800);
+}
+
+.company-auth-otp-verification button {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--element-border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.company-auth-otp-verification button:hover {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .company-auth-form {
+    padding: 15px;
+    max-width: 85%;
+  }
+
+  .company-auth-tab {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .company-auth-field-wrap input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .company-auth-button {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .company-auth-otp-verification input {
+    width: 95%;
+  }
+}

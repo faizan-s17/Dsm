@@ -1,0 +1,104 @@
+/* Styling for the Why Join Section */
+#why-join {
+  padding: 60px 20px;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc);
+  background-size: 400% 400%; /* Adjusted for a smoother gradient */
+  animation: gradient 12s ease infinite; /* Slightly faster gradient */
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#why-join h2 {
+  font-size: 3rem;
+  color: #f5f5f5;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Add depth to the title */
+  animation: slideInText 1s ease;
+}
+
+/* List of Features */
+.features-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.features-list li {
+  background: rgba(255, 255, 255, 0.1); /* Subtle transparency for modern look */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 260px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.features-list li img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); /* Icon shadow */
+}
+
+/* Feature Text */
+.features-list li p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.features-list li:hover {
+  transform: translateY(-15px); /* More pronounced lift */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9); /* Bright hover effect */
+}
+
+.features-list li:hover img {
+  transform: scale(1.2);
+  opacity: 1;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4)); /* Enhanced hover shadow */
+}
+
+.features-list li:hover p {
+  color: #6a11cb; /* Accent color on hover */
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideInText {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features-list {
+      flex-direction: column;
+      gap: 30px;
+  }
+
+  .features-list li {
+      width: 80%;
+      padding: 25px;
+  }
+
+  #why-join h2 {
+      font-size: 2.5rem;
+  }
+}

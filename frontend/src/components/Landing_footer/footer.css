@@ -1,0 +1,103 @@
+/* General Footer Styling */
+.footer {
+  background-color: #1a1c20; /* Dark background to contrast with light text */
+  color: #f5f5f5; /* Light grey for readability */
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ffd700; /* Gold for headings */
+}
+
+.footer-contact address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-contact a {
+  color: #40cf8e; /* Green for email link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #ffd700; /* Gold on hover */
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34; /* Dark background for icons */
+  border-radius: 50%;
+  color: #fff; /* White icon color */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  background-color: #ffd700; /* Gold on hover */
+  color: #1a1c20; /* Dark text color when hovered */
+}
+
+.social-icons .facebook::before {
+  content: "F"; /* Replace with an actual Facebook icon */
+}
+
+.social-icons .twitter::before {
+  content: "T"; /* Replace with an actual Twitter icon */
+}
+
+.social-icons .instagram::before {
+  content: "I"; /* Replace with an actual Instagram icon */
+}
+
+.social-icons .linkedin::before {
+  content: "L"; /* Replace with an actual LinkedIn icon */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+}
